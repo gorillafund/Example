@@ -12,7 +12,8 @@ const Site = (props) => {
     console.log("Site:",{props})
     return (
         <div>
-            <h3> Hello Fund </h3>
+            <h3> Fund-Name: {props.fund.name}</h3>
+            <h3> Fund-Address: {props.id}</h3>
         </div>
     )
   }
