@@ -1,4 +1,20 @@
 import React from 'react';
+import StaticSite from "./StaticSite";
+
+const Site = (props) => {
+    console.log("Site:",{props})
+    return (
+        <StaticSite>
+            <h3> Fund-Name: {props.fund.name}</h3>
+            <h3> Fund-Address: {props.id}</h3>
+            {console.log(props.calculationsHistory)}
+        </StaticSite>
+        )
+    }
+
+  export default Site
+
+//import React from 'react';
 //import Header from "./Header";
 //import Footer from "./Footer";
 //import ContainerRight from "./ContainerRight";
@@ -8,7 +24,7 @@ import React from 'react';
 //import DynamicMenu from "./DynamicMenu";
 //import "../utils/typography";
 
-const Site = (props) => {
+/*const Site = (props) => {
     console.log("Site:",{props})
     return (
         <div>
@@ -18,7 +34,7 @@ const Site = (props) => {
     )
   }
 
-  export default Site
+  export default Site*/
 
   /*<div className="Container">
   <ContainerLeft previous={props.previous}/>

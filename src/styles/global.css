@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+a {
+    color: black;
+}
+
+.staticSite {
+    display: grid;
+    grid-template-columns: 0.3fr 3fr 0.3fr;
+    grid-template-rows: 0.1fr 0.1fr 2.5fr 0.2fr;
+  }
+
+.header {
+    display: flex;
+    justify-content: left;
+    align-content: baseline;
+    align-items: center;
+    background-color: darkblue;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.logoImage {
+    max-width: 100px;
+    max-height: 100px;
+    padding: 1%;
+    padding-right: 50px;
+    image-rendering: scale-down;
+}
+
+.menu {
+    color: black;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+    align-items: center;
+    background-color: lightblue;
+    padding: 0.5%;
+}
+
+.content {
+    background-color: whitesmoke;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    padding: 0.5%;
+    overflow: auto;
+}
+
+.footer {
+    background-color:lightblue;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.footerChild {
+    padding: 1%;
+    margin: 0;
+}
+
+.fundList {
+    background-color: whitesmoke;
+}
+
+

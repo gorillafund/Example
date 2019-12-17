@@ -7,17 +7,15 @@ export default class Page extends React.Component{
   render(){
 
     return (
-    <div>
-       {console.log("Passed props:", this.props)}
-      <Site
-      // data from pageContext 
-      id = {this.props.pageContext.id}
-      //name = {this.props.pageContext.name}
-      // data from pageQuery
-      fund = {this.props.data.melon.fund}
-      >
-      </Site>
-    </div>
+      <div>
+        {console.log("Passed props:", this.props)}
+        <Site
+         id = {this.props.pageContext.id}
+         fund = {this.props.data.melon.fund}
+         calculationsHistory = {this.props.calculationsHistory}
+        >
+        </Site>
+      </div>
     )
   }
 }
@@ -32,6 +30,26 @@ export const query = graphql`
         totalSupply
         gav
         nav
+        first: calculationsHistory (first: 100){
+          sharePrice
+          timestamp
+          }
+        second: calculationsHistory (skip: 100){
+          sharePrice
+          timestamp
+          }
+        third: calculationsHistory (skip: 200){
+          sharePrice
+          timestamp
+          }
+        fourth:  calculationsHistory (skip: 300){
+          sharePrice
+          timestamp
+          }
+        fifth: calculationsHistory (skip: 400){
+          sharePrice
+          timestamp
+          }
         }
       }
     }

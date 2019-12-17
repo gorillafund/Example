@@ -8,27 +8,30 @@ exports.createPages = async ({ graphql, actions }) => {
   return graphql(`
     query loadFundsQuery{
           melon {
-            funds(where: {isShutdown: false}, first: 10) {
+            funds(orderBy: name, first: 10, where: {isShutdown: false}) {
               id
+              name
             }
           }
         }`
-      ).then(result => {
-        if (result.errors) {
-          throw result.errors
-      }
+    ).then(result => {
+      if (result.errors) {
+        throw result.errors
+    }
 
-      result.data.melon.funds.forEach(({id}) => {
+    const nodes = result.data.melon.funds;
+    
+    nodes.forEach(({id}) => {
 
-        createPage({
-          path: `/${id}`,
-          component: fundTemplate,
-          context: {
-            id: `${id}`,
-            },
-          })
-        }
-      )
+      createPage({
+        path: `/${id}`,
+        component: fundTemplate,
+        context: {
+          id: `${id}`,
+          },
+        })
+      })   
     })
-  }
+  } 
+
 
