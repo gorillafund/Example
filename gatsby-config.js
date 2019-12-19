@@ -22,19 +22,5 @@ module.exports = {
       //url: `${api_kovan}`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `./src/pages/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `./src/data/`,
-      },
-    },
   ]
 }
