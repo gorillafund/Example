@@ -1,7 +1,7 @@
 {
   "name": "gorillafund-example",
   "private": true,
-  "description": "A simplified example for a melon protocol UI",
+  "description": "A simplified example for a Melon Protocol UI",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
@@ -19,7 +19,8 @@
     "gatsby-source-graphql": "^2.1.25",
     "gatsby-transformer-json": "^2.2.20",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "serialize-javascript": "^2.1.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

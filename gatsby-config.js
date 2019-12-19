@@ -11,7 +11,6 @@ module.exports = {
     footer1: '/about',
     footer2: '/contact',
     footer3: '/impressum',
-    account: "0xwerwer",
   },
   plugins: [
     {
